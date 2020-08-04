@@ -88,7 +88,7 @@ function preloadimg(eventtarget){
     
 }
 const configuration={
-    rootMargin:'0% 100% 70% 100%',
+    rootMargin:'0% 90% 70% 90%',
     threshold:'0'
 }
 const imgarray=document.querySelectorAll('[data-src]')
