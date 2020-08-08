@@ -36,10 +36,10 @@ setTimeout(()=>{
     setTimeout(()=>{
         whole.style.opacity='1';
         load.style.display='none';
-        footer.style.display='flex';
+        footer.style.display='iniial';
        align.style.display='initial'
-    },500)
-},3000)
+    },10)
+},2000)
 
 
 

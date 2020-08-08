@@ -11,7 +11,7 @@ html{
     opacity: 0;
     
     display: none;
-    transition: all 1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 #loading{
     height: 100vh;
@@ -20,7 +20,7 @@ html{
     width: 100%;
     display: flex;
     opacity: 1;
-    transition: all 1s ease-in-out;
+    transition: all .5s ease-in-out;
 
 }
 #loadwidth{
