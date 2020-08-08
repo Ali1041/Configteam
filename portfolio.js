@@ -36,7 +36,7 @@ setTimeout(()=>{
     setTimeout(()=>{
         whole.style.opacity='1';
         load.style.display='none';
-        footer.style.display='iniial';
+        footer.style.opacity='1';
        align.style.display='initial'
     },10)
 },2000)
@@ -115,7 +115,7 @@ function preloadimg(entry){
     entry.target.setAttribute('src',src);
 }
 const configuration={
-    rootMargin:'0% 90% 70% 90%',
+    rootMargin:'0% 90% 300% 90%',
     threshold:'0'
 }
 const imgarray=document.querySelectorAll('[data-src]')

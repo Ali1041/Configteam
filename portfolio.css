@@ -591,11 +591,13 @@ li{
     
    
 }
+
 #footer{
+display: flex;
     background-color: black;
     height: 20vh;
-    display: none;
     margin-top: 50px;
+    opacity: 0;
 }
 #contactinfo{
     width: 30%;
