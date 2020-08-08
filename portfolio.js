@@ -22,15 +22,22 @@ const track=document.getElementById('making-r')
 //loading effect
 const load=document.getElementById('loading');
 const whole=document.getElementById('whole');
+const footer=document.getElementById('footer');
+const align=document.getElementById('block6');
 
+setTimeout(()=>{
+    align.style.display='none'
+}
+,1)
 setTimeout(()=>{
     load.style.display='none';
     load.style.opacity='0'
     whole.style.display='block';
     setTimeout(()=>{
         whole.style.opacity='1';
-            load.style.display='none';
-
+        load.style.display='none';
+        footer.style.display='flex';
+       align.style.display='initial'
     },500)
 },3000)
 
@@ -102,21 +109,20 @@ secondobserver.observe(services);
 
 //lazy loading img
 
-function preloadimg(eventtarget){
-    
+function preloadimg(entry){
+    const src=entry.target.getAttribute('data-src')
+    entry.target.removeAttribute('data-src');
+    entry.target.setAttribute('src',src);
 }
 const configuration={
     rootMargin:'0% 90% 70% 90%',
     threshold:'0'
 }
 const imgarray=document.querySelectorAll('[data-src]')
-console.log(imgarray)
 const lazyload=new IntersectionObserver((entries,lazyload)=>{
     entries.forEach((entry)=>{
         if(entry.isIntersecting){
-            const src=entry.target.getAttribute('data-src')
-            entry.target.removeAttribute('data-src');
-            entry.target.setAttribute('src',src);
+            preloadimg(entry);
             lazyload.unobserve(entry.target)
         }
     })
@@ -128,7 +134,6 @@ imgarray.forEach((img)=>{
 
 
 //slider
-console.log(slides);
 const slidemov=slides[0].getBoundingClientRect().width;
 
 slides.forEach((slide,index)=>{
@@ -143,7 +148,6 @@ function sliding(current_s,target_s,movamount){
 
 rightbtn.addEventListener('click',(e)=>{
     const crotate=carosel.lastElementChild.getBoundingClientRect();
-      
         if(crotate.top>=0&&
             crotate.left>=0&&
             crotate.right<=window.innerWidth
