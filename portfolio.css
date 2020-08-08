@@ -7,12 +7,62 @@
 html{
     scroll-behavior: smooth;
 }
+#whole{
+    opacity: 0;
+    display: none;
+    transition: all 1s ease-in-out;
+}
+#loading{
+    height: 100vh;
+    z-index: 5;
+    background-color: rgb(196, 195, 195);
+    width: 100%;
+    display: flex;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+
+}
+#loadwidth{
+    width: 1%;
+    margin: auto;
+    text-align: center;
+}
+#loading p{
+    width: 20px;
+    justify-self: center;
+    height: 20px;
+    background-color: red;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    animation: jump 0.6s infinite alternate;
+    
+}
+#loading p:nth-child(3){
+    animation-delay: 0.3s;
+    background-color: purple;
+}
+#loading p:nth-child(1){
+    background-color: orange;
+    animation-delay: 0.5s;
+    margin-left: 30px;
+}
+#loading p:nth-child(2){
+    background-color: blue;
+    margin-left: -30px;
+}
+@keyframes jump{
+    to{
+        transform: translate3d(0,-30px,0);
+    }
+}
 #block2{
     display: flex;
     background-image: linear-gradient(to right, black,black,black,black,gray,gray);
     color: black;
     padding: 10px;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
@@ -103,7 +153,7 @@ a{
     background: url(./Web1.jpg) no-repeat center center/cover;
     height: 100vh;
     width: 100%;
-    
+    background-attachment: fixed;
    
 }
 #transparent{

@@ -18,6 +18,24 @@ const slides=Array.from(carosel.children);
 const leftbtn=document.getElementById('leftarrow');
 const rightbtn=document.getElementById('rightarrow');
 const track=document.getElementById('making-r')
+
+//loading effect
+const load=document.getElementById('loading');
+const whole=document.getElementById('whole');
+
+setTimeout(()=>{
+    load.style.display='none';
+    load.style.opacity='0'
+    whole.style.display='block';
+    setTimeout(()=>{
+        whole.style.opacity='1';
+            load.style.display='none';
+
+    },500)
+},3000)
+
+
+
 //menu open event listener
 
 menubaricon.addEventListener('click',()=>{
