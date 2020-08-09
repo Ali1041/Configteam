@@ -156,6 +156,7 @@ a{
     width: 100%;
     position: relative;
     background-attachment: fixed;
+    
    
 }
 #transparent{
@@ -555,6 +556,9 @@ li{
 }
 
 @media(max-width:770px){
+    #block3{
+        background-attachment: scroll;
+    }
     #rightarrow{
         color: black;
         top: 53%;
