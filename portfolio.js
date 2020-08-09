@@ -115,7 +115,7 @@ function preloadimg(entry){
     entry.target.setAttribute('src',src);
 }
 const configuration={
-    rootMargin:'0% 90% 300% 90%',
+    rootMargin:'0% 90% 90% 90%',
     threshold:'0'
 }
 const imgarray=document.querySelectorAll('[data-src]')
